@@ -1,6 +1,6 @@
 '''
 Oliver-Haworth
-15.12.25 - 15.12.25
+15.12.25 - 16.12.25
 '''
 import pygame
 import random
@@ -118,7 +118,8 @@ while running:
         effect.play()
         ball_pos = pygame.Vector2(screen.get_width() / 2, screen.get_height() / 2)
         ball_velocity.x = random.choice((-400, 400))
-        ball_velocity.y = random.choice((-400, 400))
+        ball_velocity.y = random.randint(-400, 400)
+
 
     # --- DRAWING ---
     pygame.draw.rect(screen, "white", player_rect)
@@ -135,5 +136,6 @@ while running:
     pygame.display.flip()
 
 pygame.quit()
+
 
 
